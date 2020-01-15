@@ -1,5 +1,4 @@
 server:
-  port: 8091
   ribbon:
     ServerListRefreshInterval: 1000
     eureka:
