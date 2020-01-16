@@ -1,6 +1,10 @@
 server:
   port: 8080 #the default port used for zuul service
-  
+
+management: 
+  endpoint:
+    routes:
+      enabled: true
 # Option 1: Routing via url:
 # These simple url-routes do not get executed as a HystrixCommand, nor do they load-balance multiple URLs with Ribbon
 # It just take all request to the path echo/ and fordward to the server localhost:8091
@@ -10,3 +14,4 @@ zuul:
     echo-service:
       path: /echo/**
       url: http://localhost:8091
+      
